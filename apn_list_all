@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo " "
+echo "> Listing ports ... "
+echo " "
+
+gphoto2 --list-ports
+
+echo " "
+echo "> Listing cameras ... "
+echo " "
+
+gphoto2 --auto-detect
+

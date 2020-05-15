@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo " "
+echo "> Camera Summary "
+echo " "
+
+gphoto2 --summary
+
+echo " "
+echo "> Listing files ... "
+echo " "
+
+gphoto2 --list-files
+
