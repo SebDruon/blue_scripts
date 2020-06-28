@@ -1,6 +1,0 @@
-#!/bin/bash
-
-BUILDBOT_URL="http://cheeseburger.codices.org:8080"
-
-curl --silent "$BUILDBOT_URL/api/v2/builders" | jq '.builders[] | "\(.builderid) \(.name)"'
-
