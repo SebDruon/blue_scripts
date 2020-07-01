@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for a in salon canape accessoire guillaume loic
+do
+    printf "%-12.12s\t" "$a:"
+    wget -q -O - http://$a.plug.homedruon.com/status | jq '.update.has_update' | sed ''/true/s//`printf "\033[31mtrue\033[0m"`/'' | sed ''/false/s//`printf "\033[32mfalse\033[0m"`/''
+done
+

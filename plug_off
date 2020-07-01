@@ -5,5 +5,5 @@ if [ "$#" -ne 1 ]; then
     exit
 fi
 
-wget -q -O - http://$1/relay/0?turn=toggle
-
+wget -q -O - http://$1/relay/0?turn=off | jq
+printf "\n"

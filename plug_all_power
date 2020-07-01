@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for a in salon canape accessoire guillaume loic
+do
+    printf "%-12.12s\t" "$a:"
+    wget -q -O - http://$a.plug.homedruon.com/meter/0 | sed -e "s/^.*\"power\"://g" | sed -e "s/\,.*//g"
+    printf " W\n"
+done
+

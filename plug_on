@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo "usage: $0 <ip or hostname>"
+    exit
+fi
+
+wget -q -O - http://$1/relay/0?turn=on | jq
+printf "\n"
