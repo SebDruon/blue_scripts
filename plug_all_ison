@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for a in salon canape accessoire guillaume loic
-do
-    printf "%-12.12s\t" "$a:"
-    wget -q -O - http://$a.plug.homedruon.com/status | jq '.relays[0].ison'  | sed ''/true/s//`printf "\033[32mtrue\033[0m"`/'' | sed ''/false/s//`printf "\033[31mfalse\033[0m"`/''
-done
-

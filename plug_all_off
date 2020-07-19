@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for a in salon canape accessoire guillaume loic
-do
-    printf "%b: " "$a"
-    wget -q -O - http://$a.plug.homedruon.com/relay/0?turn=off
-done
-

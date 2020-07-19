@@ -1,4 +1,0 @@
-#!/bin/bash
-
-wget -q -O - http://$1/status | jq $2
-printf "\n"
